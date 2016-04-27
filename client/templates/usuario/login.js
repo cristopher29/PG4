@@ -1,5 +1,5 @@
 Template.login.events({
-	"mousedown button[type=submit]": function(evento)
+	"submit form": function(evento)
 	{
 		evento.preventDefault();
 		// En espera
