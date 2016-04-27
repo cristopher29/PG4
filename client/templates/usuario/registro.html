@@ -1,12 +1,50 @@
 <template name="registro">
 
-    <form>
-        Nombre<input type="text" id="nombre"/>
-        Apellido<input type="text" id="apellido"/>
-        Telefono<input type="tel" id="telefono"/>
-        email<input type="email" id="email"/>
-        Contraseña<input type="password" id="password"/>
-        <input type="submit" value="Registrarse" id="registro"/>
-    </form>
+    <div class="container">
+        <h2>Formulario de registro</h2>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nombre">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce un nombre" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="apellido">Apellido:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="apellido" placeholder="Introduce un apellido" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="telefono">Teléfono:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telefono" placeholder="Introduce un teléfono de contacto" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Correo electrónico:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="email" placeholder="example@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="password">Contraseña:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="password" placeholder="introduce una contraseña" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success" id="registro">Registrarse</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
 
 </template>
