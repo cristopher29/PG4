@@ -1,14 +1,20 @@
-Template.search.events({
-    "submit #search": function (e) {
-        e.preventDefault();
-        Session.set("searchValue", $("#searchValue").val());
+
+Template.search.helpers({
+    articulos: function() {
+        Meteor.subscribe('articulos', Session.get('query'));
+        return Articulos.find();
     }
 });
 
-Template.search.helpers({
-    busqueda: function() {
-        valorbusqueda = Session.get("searchValue");
-        console.log(valorbusqueda);
-        return Posts.find({articulo: valorbusqueda});
+Template.search.events({
+    'submit #buscador': function (e) {
+
+        e.preventDefault();
+        Session.set('query', $('#query').val());
+
+    },
+    'keyup #query': function(){
+        Session.set('query', $('#query').val());
+
     }
 });
