@@ -8,10 +8,10 @@ Template.insertarArticulo.events({
     {
         evento.preventDefault();
 
-        var tipo = jQuery('sel1').val();
-        var categoria = jQuery('sel2').val();
-        var ubicacion = jQuery('sel3').val();
-        var descripcion = jQuery('descripcion').val();
+        var tipo = jQuery('#sel1').val();
+        var categoria = jQuery('#sel2').val();
+        var ubicacion = jQuery('#sel3').val();
+        var descripcion = jQuery('#descripcion').val();
 
         articulo = {tipo: tipo,categoria: categoria, ubicacion: ubicacion, descripcion: descripcion};
 
