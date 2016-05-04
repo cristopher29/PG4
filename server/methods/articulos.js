@@ -1,8 +1,14 @@
 Meteor.methods({
     //El usuario debe tener tipo, categoria, ubicacion y descripcion.
-    crearArticulo: function(articulo) {
-
+    crearArticulo: function(postAttributes) {
         check(Meteor.userId(), String);
+
+        var user = Meteor.user();
+        var articulo = _.extend(postAttributes, {
+            userId: user._id,
+            author: user.username,
+            createdAt: new Date()
+        });
         Articulos.insert(articulo);
 
     },
