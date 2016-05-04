@@ -1,10 +1,12 @@
 Meteor.methods({
+    //El usuario debe tener tipo, categoria, ubicacion y descripcion.
     crearArticulo: function(articulo) {
 
         check(Meteor.userId(), String);
         Articulos.insert(articulo);
 
     },
+    //Los nuevos valores deben tener tipo, categoria, ubicacion o descripcion.
     editarArticulo: function(idArticulo,nuevosValores){
 
         check(Meteor.userId(), String);

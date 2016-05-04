@@ -8,6 +8,7 @@ usuarioValido = function(user){
 
 
 Meteor.methods({
+   //El usuario debe tener email, password, nombre, apellido, telefono.
    crearUsuario: function(user){
 
        if (usuarioValido(user)) {
@@ -31,6 +32,7 @@ Meteor.methods({
 
 
    },
+   //El usuario debe tener email, password.
    loginUsuario: function(user){
 
        if (usuarioValido(user)) {
