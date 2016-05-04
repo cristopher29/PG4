@@ -55,7 +55,7 @@
 	width: 49%;
 }
 #login-dp .form-group {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 .btn-fb{
 	color: #fff;
@@ -82,4 +82,16 @@
 		background-color: inherit;
 		border-top:0 none;
 	}
+}
+li{
+	padding-right: 15px;
+
+}
+#123{
+	color:darkred !important;
+}
+
+#uiui{
+	padding-left: 40px;
+	padding-right:40px ;
 }
