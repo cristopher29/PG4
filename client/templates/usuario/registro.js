@@ -16,7 +16,7 @@ Template.registro.events({
 
         usuario = {nombre: nombre, apellido: apellido, telefono: telefono, email: email, password: password};
 
-        Meteor.call('crearUsuario', articulo );
+        Meteor.call('crearUsuario', usuario );
 
     }
 });
