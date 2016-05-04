@@ -6,9 +6,9 @@ Template.search.events({
 });
 
 Template.search.helpers({
-    messages: function() {
+    busqueda: function() {
         valorbusqueda = Session.get("searchValue");
         console.log(valorbusqueda);
-        return Posts.find({examen: valorbusqueda});
+        return Posts.find({articulo: valorbusqueda});
     }
 });

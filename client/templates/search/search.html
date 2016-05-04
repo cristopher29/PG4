@@ -6,8 +6,11 @@
     <hr/>
     <h1>Resultados</h1>
     <ol>
-        {{#each messages}}
-            <li>{{examen}}</li>
+        {{#each busqueda}}
+            <li>{{articulo.tipo}}</li>
+            <li>{{articulo.categoria}}</li>
+            <li>{{articulo.ubicacion}}</li>
+            <li>{{articulo.descripcion}}</li>
         {{/each}}
     </ol>
 </template>
