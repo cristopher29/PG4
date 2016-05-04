@@ -23,3 +23,6 @@ check
 
 #Bootstrap
 twbs:bootstrap
+
+# "ctrl + M" en navegador para abrir interfaz
+msavin:mongol

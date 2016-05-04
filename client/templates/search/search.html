@@ -1,0 +1,13 @@
+<template name="search">
+    <form id="search">
+        <input type="text" id="searchValue" placeholder="Buscar..."/>
+        <button>Search</button>
+    </form>
+    <hr/>
+    <h1>Resultados</h1>
+    <ol>
+        {{#each messages}}
+            <li>{{examen}}</li>
+        {{/each}}
+    </ol>
+</template>
