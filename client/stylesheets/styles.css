@@ -25,3 +25,6 @@
 	left:			40%;
 	border-radius: 100%;
 	}
+.valor{ /*en articulo.html los resultados se desplazan hacia arriba*/
+	margin-top: 8px;
+}
