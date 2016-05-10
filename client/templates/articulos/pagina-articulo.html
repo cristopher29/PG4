@@ -1,0 +1,39 @@
+<template name="paginaArticulo">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!--Informacion del producto-->
+                <div class="col-sm-5">
+
+                    <h2 id="tituloArticulo">Artículo</h2>
+
+                    <p>Tipo de tansacción:  {{tipo}}</p>
+                    <p>Categoria:  {{categoria}}</p>
+                    <p>Ubicación:  {{ubicacion}}</p>
+                    <p>Descripción:  {{descripcion}}</p>
+                    <p>Email de contacto: {{email}}</p>
+
+                    {{#if esMiArticulo}}
+                        <a class="btn btn-primary" href="{{pathFor 'editarArticulo'}}">Editar</a>
+                    {{/if}}
+
+                </div>
+
+                <!--Cuadrado de la foto-->
+
+                <div class="col-sm-7">
+                    {{#if imagen}}
+                        <img class="img-responsive" src="{{imagen}}">
+                    {{else}}
+                        <img class="img-responsive" src="http://placehold.it/450x350">
+                    {{/if}}
+
+                </div>
+
+            </div>
+
+        </div>
+
+</template>

@@ -1,3 +1,4 @@
+
 Meteor.publish('articulos',function(query){
     if (!query) {
         return Articulos.find();
@@ -6,4 +7,8 @@ Meteor.publish('articulos',function(query){
         { descripcion: {$regex : ".*"+query+".*"} }
     );
     return cursor;
+});
+
+Meteor.publish('articulo',function(articuloId){
+    return Articulos.find({_id: articuloId});
 });

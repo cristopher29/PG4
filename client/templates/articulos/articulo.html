@@ -1,50 +1,25 @@
 <template name="articulo">
-    <div class="container">
-        <!-- Título -->
-        <h2 id="tituloArticulo">Artículo</h2>
 
-        <!--Informacion del producto-->
-        <div class="form-horizontal col-xs-9" role="form" novalidate="novalidate">
-
-            <div id="tipotransaccion" class="form-group">
-                <label class="control-label col-sm-2">Tipo de tansacción:</label>
-                <div class="col-sm-10 valor">
-                    Venta
-                </div>
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">enviado por {{author}}</div>
+            <div class="panel-body">
+                {{#if imagen}}
+                    <img src="{{imagen}}" class="img-responsive" alt="">
+                    <hr>
+                {{/if}}
+                <p>Tipo: {{tipo}}</p>
+                <p>Categoria: {{categoria}}</p>
+                <p>Ubicacion: {{ubicacion}}</p>
+                <p>Descripcion: {{descripcion}}</p>
             </div>
-
-
-            <div id="categoria" class="form-group">
-                <label class="control-label col-sm-2" >Categoria:</label>
-                <div class="col-sm-10 valor">
-                    Electronica
-                </div>
+            <div class="panel-footer">
+                <a href="{{pathFor 'paginaArticulo'}}" class="btn btn-primary">Ver</a>
+                {{#if esMiArticulo}}
+                    <a href="{{pathFor 'editarArticulo'}}" class="btn btn-primary">Editar</a>
+                {{/if}}
             </div>
-
-            <div id="ubicacion" class="form-group">
-                <label class="control-label col-sm-2" >Ubicación:</label>
-                <div class="col-sm-10 valor">
-                    El Prat de Llobregat
-                </div>
-            </div>
-
-            <div id="descripcion" class="form-group">
-                <label class="control-label col-sm-2" >Descripción:</label>
-                <div class="col-sm-10 valor">
-                    Es un producto muy bueno.
-                </div>
-            </div>
-        </div>
-
-        <!--Cuadrado de la foto-->
-        <div id="foto" class="col-xs-3">
-            <table width="220" height="220" border="1" cellspacing="0" cellpadding="1" style="text-align: center">
-                <tr>
-                    <td>foto</td>
-                </tr>
-            </table>
         </div>
     </div>
-
 
 </template>

@@ -1,10 +1,18 @@
 Template.login.events({
-	"submit form": function(evento)
-	{
+	"submit #login": function(evento) {
+
 		evento.preventDefault();
-		// En espera
-		alert("Click en submit"
-			+"\nCorreo electrónico: "+ $("#loginEmail input").val()
-			+"\nContraseña: "+ $("#loginPassword input").val());
+
+		var email  = $("#email").val();
+		var password = $("#pwd").val();
+
+
+		Meteor.loginWithPassword(email, password, function(error){
+			if(error){
+				return Bert.alert( error.reason, 'danger', 'growl-top-right' );
+			}
+			Router.go('listaArticulos')
+		});
+
 	}
 });

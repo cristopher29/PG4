@@ -24,6 +24,10 @@ reactive-var
 
 #Bootstrap
 twbs:bootstrap
+themeteorchef:bert
 
 # "ctrl + M" en navegador para abrir interfaz
 msavin:mongol
+
+#Datos Fake
+sscaff1:fake

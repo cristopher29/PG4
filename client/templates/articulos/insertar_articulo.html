@@ -1,12 +1,12 @@
-<template name="editarArticulo">
+<template name="insertarArticulo">
 
     <div class="container">
-        <h2>Editar Artículo</h2>
-        <form role="form" class="form-horizontal">
+        <h2>Insertar Artículo</h2>
+        <form id="insertar" role="form" class="form-horizontal">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="transaccion">Tipo de transacción:</label>
                 <div class="col-sm-10">
-                    <select class="form-control" id="sel1" value="{{ articulos.tipo }}">
+                    <select class="form-control" id="sel1">
                         <option>Venta</option>
                         <option>Compra</option>
                         <option>Alquiler</option>
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="caregoria">Categoria:</label>
                 <div class="col-sm-10">
-                    <select class="form-control" id="sel2" value="{{ articulos.categoria }}">
+                    <select class="form-control" id="sel2">
                         <option>Electrónica</option>
                         <option>Moda</option>
                         <option>Hogar</option>
@@ -33,7 +33,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="caregoria">Ubicación:</label>
                 <div class="col-sm-10">
-                    <select class="form-control" id="sel3" value="{{ articulos.ubicacion }}">
+                    <select class="form-control" id="sel3">
                         <option>Sant Boi</option>
                         <option>Viladecans</option>
                         <option>Gavá</option>
@@ -46,16 +46,27 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="descripción">Descripción:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" value="{{ articulos.descripcion }}" id="descripcion" placeholder="Descripción del artículo" required>
+                    <input type="text" class="form-control" id="descripcion" placeholder="Introduce la descripción del artículo" required>
                 </div>
             </div>
-        </form>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="descripción">Imagen:</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="imagen" accept="image/jpg,image/png,image/jpeg" required>
+                </div>
+            </div>
+
+            <img id="imagen_preview" class="img-responsive" src="" width="300" alt="">
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-success" id="editar">Editar</button>
+                    <button type="submit" class="btn btn-success">Insertar</button>
                 </div>
             </div>
+
+        </form>
+
     </div>
 
 </template>

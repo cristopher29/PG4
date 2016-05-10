@@ -16,7 +16,13 @@ Template.registro.events({
 
         usuario = {nombre: nombre, apellido: apellido, telefono: telefono, email: email, password: password};
 
-        Meteor.call('crearUsuario', usuario );
+        Meteor.call('crearUsuario', usuario, function(error, resultado){
+            if(error){
+                return Bert.alert( error.reason, 'danger', 'growl-top-right' );
+            }
+            Router.go('login');
+            return Bert.alert( 'Usuario creado!', 'success', 'growl-top-right' );
+        });
 
     }
 });

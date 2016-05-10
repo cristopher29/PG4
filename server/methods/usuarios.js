@@ -6,7 +6,6 @@ usuarioValido = function(user){
     }
 };
 
-
 Meteor.methods({
    //El usuario debe tener email, password, nombre, apellido, telefono.
    crearUsuario: function(user){
@@ -15,7 +14,7 @@ Meteor.methods({
            check(user.email, String);
            check(user.password, String);
 
-           var campos = {
+           var nuevoUsuario = {
                email: user.email,
                password: user.password,
                profile: {
@@ -24,27 +23,12 @@ Meteor.methods({
                    telefono: user.telefono
                }
            };
-           Accounts.createUser(campos);
+           Accounts.createUser(nuevoUsuario);
 
        }else{
            throw new Meteor.Error('invalid-user', 'Verifica los campos');
        }
 
 
-   },
-   //El usuario debe tener email, password.
-   loginUsuario: function(user){
-
-       if (usuarioValido(user)) {
-           check(user.email, String);
-           check(user.password, String);
-           Meteor.loginWithPassword(user.email, user.password);
-       }else{
-           throw new Meteor.Error('invalid-user', 'Verifica los campos');
-       }
-   },
-   cerrarSesion: function(){
-       check(Meteor.userId(), String);
-       Meteor.logout();
    }
 });
