@@ -10,7 +10,7 @@
 //            tipo: 'tipo',
 //            categoria: 'categoria',
 //            ubicacion: 'ubicacion',
-//            descripcion: Fake.word()
+//            descripcion: 'asdasdasdsa'
 //        });
 //
 //    }
