@@ -14,7 +14,12 @@
 
             <article>
                 <div>
-                    <a class="title-a" href="{{pathFor 'paginaArticulo'}}"><h2>{{titulo}}</h2></a> <span class="pull-right"><a href="{{pathFor 'editarArticulo'}}">Editar</a></span>
+                    <a class="title-a" href="{{pathFor 'paginaArticulo'}}"><h2>{{titulo}}</h2></a>
+                    <span class="pull-right">
+                        {{#if esMiArticulo}}
+                            <a href="{{pathFor 'editarArticulo'}}">Editar</a>
+                        {{/if}}
+                    </span>
                 </div>
                 <h3>{{categoria}}</h3>
                 <hr>
