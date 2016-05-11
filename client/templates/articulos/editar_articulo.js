@@ -2,17 +2,35 @@
 
 
 Template.editarArticulo.events({
-    "click #editar": function(evento)
+    'change #imagen': function(e){
+
+        var input = e.target;
+
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+
+            reader.onload = function (image) {
+                $('#imagen_preview').attr('src', image.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+
+    },
+    "submit #editar": function(evento)
     {
         evento.preventDefault();
 
-        var tipo = jQuery('#sel1').val();
-        var categoria = jQuery('#sel2').val();
-        var ubicacion = jQuery('#sel3').val();
-        var descripcion = jQuery('#descripcion').val();
+        var titulo = $('#titulo').val();
+        var tipo = $('#tipo').val();
+        var categoria = $('#categoria').val();
+        var ubicacion = $('#ubicacion').val();
+        var descripcion = $('#descripcion').val();
+        var imagen = $('#imagen_preview').attr('src');
 
-        var articulo = {tipo: tipo,categoria: categoria, ubicacion: ubicacion, descripcion: descripcion};
-        
+        articulo = {titulo: titulo, tipo: tipo,categoria: categoria, ubicacion: ubicacion, descripcion: descripcion, imagen: imagen};
+
         Meteor.call('editarArticulo', this._id ,articulo, function(error,resultado){
             if(error){
                 return Bert.alert( error.reason, 'danger', 'growl-top-right' );
