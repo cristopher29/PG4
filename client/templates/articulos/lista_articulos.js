@@ -1,10 +1,7 @@
-/**
- * Created by CristoH on 10/05/2016.
- */
 
 
 Template.listaArticulos.helpers({
    articulos: function(){
-       return Articulos.find();
+       return Articulos.find({},{sort: {createdAt: -1}});
    }
 });

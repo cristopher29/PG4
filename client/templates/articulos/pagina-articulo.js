@@ -1,6 +1,4 @@
-/**
- * Created by CristoH on 11/05/2016.
- */
+
 
 Template.paginaArticulo.helpers({
    esMiArticulo: function(){

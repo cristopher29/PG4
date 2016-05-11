@@ -1,24 +1,35 @@
 <template name="articulo">
 
+
     <div class="col-sm-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">enviado por {{author}}</div>
-            <div class="panel-body">
-                {{#if imagen}}
-                    <img src="{{imagen}}" class="img-responsive" alt="">
-                    <hr>
-                {{/if}}
-                <p>Tipo: {{tipo}}</p>
-                <p>Categoria: {{categoria}}</p>
-                <p>Ubicacion: {{ubicacion}}</p>
-                <p>Descripcion: {{descripcion}}</p>
-            </div>
-            <div class="panel-footer">
-                <a href="{{pathFor 'paginaArticulo'}}" class="btn btn-primary">Ver</a>
-                {{#if esMiArticulo}}
-                    <a href="{{pathFor 'editarArticulo'}}" class="btn btn-primary">Editar</a>
-                {{/if}}
-            </div>
+        <div class="card">
+
+            <aside>
+
+                <img class="img-responsive" src="{{imagen}}" alt="" />
+
+                <a href="{{pathFor 'paginaArticulo'}}" class="button"><i class="fa fa-eye" aria-hidden="true"></i></a>
+
+            </aside>
+
+            <article>
+                <div>
+                    <a class="title-a" href="{{pathFor 'paginaArticulo'}}"><h2>{{titulo}}</h2></a> <span class="pull-right"><a href="{{pathFor 'editarArticulo'}}">Editar</a></span>
+                </div>
+                <h3>{{categoria}}</h3>
+                <hr>
+                <ul class="list-inline">
+                    <li><i class="icon fa fa-user" aria-hidden="true"></i> por <span>{{author}}</span></li>
+                    <li><i class="icon fa fa-clock-o" aria-hidden="true"></i> <span>{{livestamp createdAt}}</span></li>
+                    <li><i class="icon fa fa-map-marker" aria-hidden="true"></i> <span>{{ubicacion}}</span></li>
+                </ul>
+
+                <p>{{descripcion}}</p>
+
+                <p class="tags"><span>Tipo:&nbsp;</span> <tipo class="{{tipo}}">{{tipo}}</tipo></p>
+
+            </article>
+
         </div>
     </div>
 

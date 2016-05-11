@@ -27,14 +27,14 @@ Template.insertarArticulo.events({
             Router.go('login');
             return Bert.alert( 'Inicia Sesion', 'warning', 'growl-top-right' );
         }
-
-        var tipo = $('#sel1').val();
-        var categoria = $('#sel2').val();
-        var ubicacion = $('#sel3').val();
+        var titulo = $('#titulo').val();
+        var tipo = $('#tipo').val();
+        var categoria = $('#categoria').val();
+        var ubicacion = $('#ubicacion').val();
         var descripcion = $('#descripcion').val();
         var imagen = $('#imagen_preview').attr('src');
 
-        articulo = {tipo: tipo,categoria: categoria, ubicacion: ubicacion, descripcion: descripcion, imagen: imagen};
+        articulo = {titulo: titulo, tipo: tipo,categoria: categoria, ubicacion: ubicacion, descripcion: descripcion, imagen: imagen};
 
         Meteor.call('insertarArticulo', articulo, function(error, resultado){
             if(error){

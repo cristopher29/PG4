@@ -21,6 +21,8 @@ accounts-password
 iron:router
 check
 reactive-var
+copleykj:livestamp
+momentjs:moment
 
 #Bootstrap
 twbs:bootstrap

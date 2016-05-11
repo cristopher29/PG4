@@ -121,3 +121,210 @@ li{
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+/***********************************************************************************************/
+/***************************************Loading*************************************************/
+/***********************************************************************************************/
+
+
+@-webkit-keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.loading-spinner {
+	-webkit-animation-duration: 0.75s;
+	-moz-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: rotate-forever;
+	-moz-animation-name: rotate-forever;
+	animation-name: rotate-forever;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	animation-timing-function: linear;
+	height: 30px;
+	width: 30px;
+	border: 8px solid #000000;
+	border-right-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.loading-spinner {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	margin: -15px 0 -15px;
+}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 0;
+	border-top: 1px solid rgba(248, 245, 240, 0);
+}
+
+.card {
+	background: #f2eef0;
+	margin: 4em auto;
+	width: 100%;
+	max-width: 496px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.card aside {
+	position: relative;
+}
+.card aside img {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.card aside .button {
+	background: #57abf2;
+	display: inline-block;
+	position: absolute;
+	top: 83%;
+	right: 3%;
+	width: 4.0625em;
+	height: 4.0625em;
+	border-radius: 4.0625em;
+	line-height: 4.3em;
+	text-align: center;
+}
+.card aside .button .icon {
+	vertical-align: middle;
+}
+.card article {
+	padding: 1.25em 1.5em;
+}
+.card article ul {
+	list-style: none;
+}
+
+.card article h2, .recipe-card article h3 {
+	margin: 0;
+	font-weight: 300;
+}
+.card article h2 {
+	font-size: 1.75em;
+}
+.card article h3 {
+	font-size: 0.9375em;
+	color: #838689;
+}
+.card article p {
+	margin: 1.25em 0;
+	font-size: 1em;
+	font-weight: 400;
+	color: #222222;
+}
+.card article p span {
+	font-weight: 700;
+	color: #000000;
+}
+.card article .tags {
+	margin: 2em 0 0.5em;
+}
+.card .icon {
+	color: #57ABF2;
+}
+.fa-eye{
+	font-size: 1.5em;
+	color: #ffffff;
+}
+.title-a{
+	color: #57ABF2;
+	text-decoration: none;
+}
+.title-a:hover, .title-a:link, .title-a:visited,.title-a:active
+{
+	color: #4e9ad9;
+	text-decoration:none;
+	cursor:pointer;
+}
+.Venta{
+	color: #ffffff;
+	text-transform: lowercase;
+	font-size: 1.5rem;
+	padding: 5px;
+	text-align: center;
+	background: #81e454;
+}
+.Compra{
+	color: #ffffff;
+	text-transform: lowercase;
+	font-size: 1.5rem;
+	padding: 5px;
+	text-align: center;
+	background: #444de4;
+}
+.Alquiler{
+	color: #ffffff;
+	text-transform: lowercase;
+	font-size: 1.5rem;
+	padding: 5px;
+	text-align: center;
+	background: #e4ca3b;
+}
+.Regalo{
+	color: #ffffff;
+	text-transform: lowercase;
+	font-size: 1.5rem;
+	padding: 5px;
+	text-align: center;
+	background: #e4564b;
+}
