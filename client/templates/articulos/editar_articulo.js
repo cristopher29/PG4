@@ -38,5 +38,19 @@ Template.editarArticulo.events({
             Router.go('paginaArticulo',{_id: resultado._id})
         });
 
+    },
+    'click #eliminar': function(e){
+        e.preventDefault();
+
+        if(confirm("Seguro que quieres eliminarlo?")){
+
+            Meteor.call('eliminarArticulo', this._id, function(error, resultado){
+                if(error){
+                    return Bert.alert( error.reason, 'danger', 'growl-top-right' );
+                }
+                Router.go('listaArticulos');
+            });
+        }
+
     }
 });
